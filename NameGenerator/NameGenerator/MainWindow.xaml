@@ -5,8 +5,134 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NameGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="600">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
 
+        <!-- 1rd row -->
+        <Button Grid.Row="0"
+                Height="30px"
+                Width="60px"
+                HorizontalAlignment="left"
+                VerticalAlignment="Top"
+                Margin="5px"
+                Content="Load"
+                />
+
+        <Button Grid.Column="1"
+                Height="30px"
+                Width="60px"
+                HorizontalAlignment="left"
+                VerticalAlignment="Top"
+                Margin="5px"
+                Content="Load"
+                />
+
+        <Label Height="30px" Content="First names"
+               Width="80px" Margin="70,5,150,77"               
+               />
+        <Label Height="30px" x:Name="lblCountFristnames"
+               Width="30px" Margin="155,5,115,77" RenderTransformOrigin="0.5,0.5"               
+               >
+        </Label>
+
+        <Label Height="30px" Grid.Column="1" Content="Last names"
+               Width="80px" Margin="70,5,150,77"               
+               />
+        <Label x:Name="lblCountLastnames" Height="30px" Grid.Column="1"
+               Width="30px" Margin="155,5,115,77" RenderTransformOrigin="0.5,0.5"               
+               >
+        </Label>
+
+        <!-- 2rd row -->
+        <ListBox 
+            x:Name="lbFirstnames"
+            Grid.Row="1"
+            Margin="5px"
+            Background="LightSteelBlue"
+            />
+
+        <ListBox
+            x:Name="lbLastnames"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="5px"
+            Background="LightGray"
+            />
+
+        <!-- 3rd row -->
+        <ListBox
+            x:Name="lbFullnames"
+            Grid.Row="2"
+            Margin="5px"
+            Background="LightSeaGreen"
+            />
+
+        <StackPanel Grid.Column="1" 
+                    Grid.Row="2"
+                    Margin="5,5,5,0"
+                    Height="61"
+                    VerticalAlignment="Top"                    
+                    >
+            <Label Content="Nums of last names: " Width="120px"/>
+            <RadioButton Content="One" Width="50px" x:Name="rbOne" IsChecked="true"/>
+            <RadioButton Content="Two" Width="50px" x:Name="rbTwo"/>
+        </StackPanel>
+        <Button Grid.Column="1"
+                Grid.Row="2"
+                Height="30px"
+                Margin="0,71,10,124"
+                Content="Generate names"
+                x:Name="btnGenerateNames"
+                />
+        <Button Grid.Column="1"
+                Grid.Row="2"
+                Height="30px"
+                Margin="0,106,10,89"
+                Content="Remove generated names"
+                x:Name="btnRemoveGenerated"
+                />
+        <Button Grid.Column="1"
+                Grid.Row="2"
+                Height="30px"
+                Margin="0,141,10,54"
+                Content="Sort names"
+                x:Name="btnSortNames"
+                />
+        <Button Grid.Column="1"
+                Grid.Row="2"
+                Height="30px"
+                Margin="0,176,10,19"
+                Content="Save names"
+                x:Name="btnSaveNames"
+                />
+
+        <!-- 4th row -->
+        <Label
+            Grid.Row="3"
+            Width="150px"
+            HorizontalAlignment="left"
+            Margin="5 0 0 0"
+            Content="Generated names counter:"
+            />
+        <Label
+            Grid.Row="3"
+            Width="20px"
+            HorizontalAlignment="Left"
+            Margin="160,0,0,0"
+            Content="0" Grid.ColumnSpan="2"
+            />
     </Grid>
+
+
+
 </Window>
