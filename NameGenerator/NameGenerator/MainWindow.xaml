@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NameGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="630" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -25,7 +25,7 @@
                 HorizontalAlignment="left"
                 VerticalAlignment="Top"
                 Margin="5px"
-                Content="Load"
+                Content="Load" Click="Button_Click"
                 />
 
         <Button Grid.Column="1"
@@ -35,6 +35,7 @@
                 VerticalAlignment="Top"
                 Margin="5px"
                 Content="Load"
+                x:Name="btnLoadLast" Click="btnLoadLast_Click"
                 />
 
         <Label Height="30px" Content="First names"
@@ -90,28 +91,29 @@
         <Button Grid.Column="1"
                 Grid.Row="2"
                 Height="30px"
-                Margin="0,71,10,124"
+                Margin="5,71,5,124"
                 Content="Generate names"
                 x:Name="btnGenerateNames"
+                Click="btnGenerateNames_Click"
                 />
         <Button Grid.Column="1"
                 Grid.Row="2"
                 Height="30px"
-                Margin="0,106,10,89"
+                Margin="5,106,5,89"
                 Content="Remove generated names"
                 x:Name="btnRemoveGenerated"
                 />
         <Button Grid.Column="1"
                 Grid.Row="2"
                 Height="30px"
-                Margin="0,141,10,54"
+                Margin="5,141,5,54"
                 Content="Sort names"
                 x:Name="btnSortNames"
                 />
         <Button Grid.Column="1"
                 Grid.Row="2"
                 Height="30px"
-                Margin="0,176,10,19"
+                Margin="5,176,5,19"
                 Content="Save names"
                 x:Name="btnSaveNames"
                 />
